@@ -1,7 +1,7 @@
 import random
 import score
 
-
+# this is batting class
 class AtBat:
     def __init__(self, batting_team_name, other_team_name):
         self.batting_team_name = batting_team_name

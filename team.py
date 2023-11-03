@@ -1,4 +1,4 @@
-
+# this is team class
 class Team:
     def __init__(self, name, home_team):
         self.name = name
