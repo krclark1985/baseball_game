@@ -9,7 +9,9 @@ def create_app(test_config=None):
     app = Flask(__name__, instance_relative_config=True)
     app.config.from_mapping(
         SECRET_KEY='dev',
-        SQLALCHEMY_DATABASE_URI='postgresql://postgres@localhost:5432/baseball_data',
+        SQLALCHEMY_DATABASE_URI='Server=tcp:baseball-game-server.database.windows.net,1433;Initial Catalog=baseball_game_db;Persist Security Info=False;User ID=postgres;Password=admin1234!;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;',
+        # Try this connection string here:
+        # Server=tcp:baseball-game-server.database.windows.net,1433;Initial Catalog=baseball_game_db;Persist Security Info=False;User ID=postgres;Password={your_password};MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;
         SQLALCHEMY_TRACK_MODIFICATIONS=False,
         SQLALCHEMY_ECHO=True
     )

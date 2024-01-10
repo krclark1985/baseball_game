@@ -17,3 +17,6 @@ def index():
 def show(id: int):
     t = Team.query.get_or_404(id, "Team not found")
     return jsonify(t.serialize())
+
+# Need to write code to allow initial POST of teams!
+# Use player POST as template
